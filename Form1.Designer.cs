@@ -31,50 +31,50 @@
             groupBox1 = new GroupBox();
             groupBox4 = new GroupBox();
             label6 = new Label();
-            textBox4 = new TextBox();
+            ViewTotalOilPrice = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            InputSum = new TextBox();
+            InputVolume = new TextBox();
             groupBox3 = new GroupBox();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
+            SumType = new RadioButton();
+            VolumeType = new RadioButton();
+            ViewPriceOil = new TextBox();
+            InputTypeOil = new ComboBox();
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
             groupBox5 = new GroupBox();
             label9 = new Label();
-            textBox9 = new TextBox();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            numericUpDown4 = new NumericUpDown();
-            numericUpDown3 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
-            numericUpDown1 = new NumericUpDown();
+            ViewTotalCofePrice = new TextBox();
+            ViewCocaColaPrice = new TextBox();
+            ViewFrenchFryPrice = new TextBox();
+            ViewBurgerPrice = new TextBox();
+            ViewHotDogPrice = new TextBox();
+            InputCocaColaCount = new NumericUpDown();
+            InputFrenchFryCount = new NumericUpDown();
+            InputBurgerCount = new NumericUpDown();
+            InputHotDogCount = new NumericUpDown();
             label8 = new Label();
             label7 = new Label();
-            checkBox4 = new CheckBox();
-            checkBox3 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
+            checkBoxCocaCola = new CheckBox();
+            checkBoxFrenchFry = new CheckBox();
+            checkBoxBurger = new CheckBox();
+            checkBoxHotDog = new CheckBox();
             groupBox6 = new GroupBox();
-            button1 = new Button();
+            CheckButton = new Button();
             label10 = new Label();
-            textBox10 = new TextBox();
+            ViewTotalPrice = new TextBox();
             groupBox1.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)InputCocaColaCount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)InputFrenchFryCount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)InputBurgerCount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)InputHotDogCount).BeginInit();
             groupBox6.SuspendLayout();
             SuspendLayout();
             // 
@@ -85,11 +85,11 @@
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(InputSum);
+            groupBox1.Controls.Add(InputVolume);
             groupBox1.Controls.Add(groupBox3);
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(ViewPriceOil);
+            groupBox1.Controls.Add(InputTypeOil);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.ForeColor = Color.Snow;
@@ -103,7 +103,7 @@
             // groupBox4
             // 
             groupBox4.Controls.Add(label6);
-            groupBox4.Controls.Add(textBox4);
+            groupBox4.Controls.Add(ViewTotalOilPrice);
             groupBox4.ForeColor = Color.White;
             groupBox4.Location = new Point(18, 214);
             groupBox4.Name = "groupBox4";
@@ -121,17 +121,17 @@
             label6.TabIndex = 13;
             label6.Text = "RUB";
             // 
-            // textBox4
+            // ViewTotalOilPrice
             // 
-            textBox4.BackColor = Color.Black;
-            textBox4.Font = new Font("Impact", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox4.ForeColor = Color.White;
-            textBox4.Location = new Point(17, 39);
-            textBox4.Name = "textBox4";
-            textBox4.ReadOnly = true;
-            textBox4.Size = new Size(201, 40);
-            textBox4.TabIndex = 0;
-            textBox4.TextAlign = HorizontalAlignment.Right;
+            ViewTotalOilPrice.BackColor = Color.Black;
+            ViewTotalOilPrice.Font = new Font("Impact", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ViewTotalOilPrice.ForeColor = Color.White;
+            ViewTotalOilPrice.Location = new Point(17, 39);
+            ViewTotalOilPrice.Name = "ViewTotalOilPrice";
+            ViewTotalOilPrice.ReadOnly = true;
+            ViewTotalOilPrice.Size = new Size(201, 40);
+            ViewTotalOilPrice.TabIndex = 0;
+            ViewTotalOilPrice.TextAlign = HorizontalAlignment.Right;
             // 
             // label5
             // 
@@ -160,28 +160,30 @@
             label3.TabIndex = 9;
             label3.Text = "L";
             // 
-            // textBox3
+            // InputSum
             // 
-            textBox3.BackColor = Color.Black;
-            textBox3.ForeColor = Color.White;
-            textBox3.Location = new Point(149, 161);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(107, 31);
-            textBox3.TabIndex = 8;
+            InputSum.BackColor = Color.Black;
+            InputSum.ForeColor = Color.White;
+            InputSum.Location = new Point(149, 161);
+            InputSum.Name = "InputSum";
+            InputSum.Size = new Size(107, 31);
+            InputSum.TabIndex = 8;
+            InputSum.TextChanged += InputSum_TextChanged;
             // 
-            // textBox2
+            // InputVolume
             // 
-            textBox2.BackColor = Color.Black;
-            textBox2.ForeColor = Color.White;
-            textBox2.Location = new Point(150, 121);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(107, 31);
-            textBox2.TabIndex = 7;
+            InputVolume.BackColor = Color.Black;
+            InputVolume.ForeColor = Color.White;
+            InputVolume.Location = new Point(150, 121);
+            InputVolume.Name = "InputVolume";
+            InputVolume.Size = new Size(107, 31);
+            InputVolume.TabIndex = 7;
+            InputVolume.TextChanged += InputVolume_TextChanged;
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(radioButton2);
-            groupBox3.Controls.Add(radioButton1);
+            groupBox3.Controls.Add(SumType);
+            groupBox3.Controls.Add(VolumeType);
             groupBox3.ForeColor = Color.White;
             groupBox3.Location = new Point(18, 107);
             groupBox3.Name = "groupBox3";
@@ -189,48 +191,54 @@
             groupBox3.TabIndex = 6;
             groupBox3.TabStop = false;
             // 
-            // radioButton2
+            // SumType
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("Impact", 12F);
-            radioButton2.Location = new Point(17, 54);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(73, 24);
-            radioButton2.TabIndex = 1;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Сумма";
-            radioButton2.UseVisualStyleBackColor = true;
+            SumType.AutoSize = true;
+            SumType.Font = new Font("Impact", 12F);
+            SumType.Location = new Point(17, 54);
+            SumType.Name = "SumType";
+            SumType.Size = new Size(73, 24);
+            SumType.TabIndex = 1;
+            SumType.TabStop = true;
+            SumType.Text = "Сумма";
+            SumType.UseVisualStyleBackColor = true;
+            SumType.CheckedChanged += SumType_CheckedChanged;
             // 
-            // radioButton1
+            // VolumeType
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Impact", 12F);
-            radioButton1.Location = new Point(17, 21);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(74, 24);
-            radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Кол-во";
-            radioButton1.UseVisualStyleBackColor = true;
+            VolumeType.AutoSize = true;
+            VolumeType.Font = new Font("Impact", 12F);
+            VolumeType.Location = new Point(17, 21);
+            VolumeType.Name = "VolumeType";
+            VolumeType.Size = new Size(74, 24);
+            VolumeType.TabIndex = 0;
+            VolumeType.TabStop = true;
+            VolumeType.Text = "Кол-во";
+            VolumeType.UseVisualStyleBackColor = true;
+            VolumeType.CheckedChanged += VolumeType_CheckedChanged;
             // 
-            // textBox1
+            // ViewPriceOil
             // 
-            textBox1.BackColor = Color.Black;
-            textBox1.ForeColor = Color.White;
-            textBox1.Location = new Point(103, 67);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(154, 31);
-            textBox1.TabIndex = 5;
+            ViewPriceOil.BackColor = Color.Black;
+            ViewPriceOil.ForeColor = Color.White;
+            ViewPriceOil.Location = new Point(103, 67);
+            ViewPriceOil.Name = "ViewPriceOil";
+            ViewPriceOil.ReadOnly = true;
+            ViewPriceOil.Size = new Size(154, 31);
+            ViewPriceOil.TabIndex = 5;
             // 
-            // comboBox1
+            // InputTypeOil
             // 
-            comboBox1.BackColor = Color.Black;
-            comboBox1.ForeColor = Color.White;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(103, 30);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(154, 31);
-            comboBox1.TabIndex = 4;
+            InputTypeOil.BackColor = Color.Black;
+            InputTypeOil.DropDownStyle = ComboBoxStyle.DropDownList;
+            InputTypeOil.ForeColor = Color.White;
+            InputTypeOil.FormattingEnabled = true;
+            InputTypeOil.Items.AddRange(new object[] { "Oil92", "Oil95" });
+            InputTypeOil.Location = new Point(103, 30);
+            InputTypeOil.Name = "InputTypeOil";
+            InputTypeOil.Size = new Size(154, 31);
+            InputTypeOil.TabIndex = 4;
+            InputTypeOil.SelectedIndexChanged += InputTypeOil_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -254,20 +262,20 @@
             // 
             groupBox2.BackColor = Color.Black;
             groupBox2.Controls.Add(groupBox5);
-            groupBox2.Controls.Add(textBox8);
-            groupBox2.Controls.Add(textBox7);
-            groupBox2.Controls.Add(textBox6);
-            groupBox2.Controls.Add(textBox5);
-            groupBox2.Controls.Add(numericUpDown4);
-            groupBox2.Controls.Add(numericUpDown3);
-            groupBox2.Controls.Add(numericUpDown2);
-            groupBox2.Controls.Add(numericUpDown1);
+            groupBox2.Controls.Add(ViewCocaColaPrice);
+            groupBox2.Controls.Add(ViewFrenchFryPrice);
+            groupBox2.Controls.Add(ViewBurgerPrice);
+            groupBox2.Controls.Add(ViewHotDogPrice);
+            groupBox2.Controls.Add(InputCocaColaCount);
+            groupBox2.Controls.Add(InputFrenchFryCount);
+            groupBox2.Controls.Add(InputBurgerCount);
+            groupBox2.Controls.Add(InputHotDogCount);
             groupBox2.Controls.Add(label8);
             groupBox2.Controls.Add(label7);
-            groupBox2.Controls.Add(checkBox4);
-            groupBox2.Controls.Add(checkBox3);
-            groupBox2.Controls.Add(checkBox2);
-            groupBox2.Controls.Add(checkBox1);
+            groupBox2.Controls.Add(checkBoxCocaCola);
+            groupBox2.Controls.Add(checkBoxFrenchFry);
+            groupBox2.Controls.Add(checkBoxBurger);
+            groupBox2.Controls.Add(checkBoxHotDog);
             groupBox2.ForeColor = Color.Snow;
             groupBox2.Location = new Point(360, 21);
             groupBox2.Name = "groupBox2";
@@ -279,7 +287,7 @@
             // groupBox5
             // 
             groupBox5.Controls.Add(label9);
-            groupBox5.Controls.Add(textBox9);
+            groupBox5.Controls.Add(ViewTotalCofePrice);
             groupBox5.ForeColor = Color.White;
             groupBox5.Location = new Point(17, 214);
             groupBox5.Name = "groupBox5";
@@ -297,109 +305,113 @@
             label9.TabIndex = 13;
             label9.Text = "RUB";
             // 
-            // textBox9
+            // ViewTotalCofePrice
             // 
-            textBox9.BackColor = Color.Black;
-            textBox9.Font = new Font("Impact", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox9.ForeColor = Color.White;
-            textBox9.Location = new Point(17, 39);
-            textBox9.Name = "textBox9";
-            textBox9.ReadOnly = true;
-            textBox9.Size = new Size(238, 40);
-            textBox9.TabIndex = 0;
-            textBox9.TextAlign = HorizontalAlignment.Right;
+            ViewTotalCofePrice.BackColor = Color.Black;
+            ViewTotalCofePrice.Font = new Font("Impact", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ViewTotalCofePrice.ForeColor = Color.White;
+            ViewTotalCofePrice.Location = new Point(17, 39);
+            ViewTotalCofePrice.Name = "ViewTotalCofePrice";
+            ViewTotalCofePrice.ReadOnly = true;
+            ViewTotalCofePrice.Size = new Size(238, 40);
+            ViewTotalCofePrice.TabIndex = 0;
+            ViewTotalCofePrice.TextAlign = HorizontalAlignment.Right;
             // 
-            // textBox8
+            // ViewCocaColaPrice
             // 
-            textBox8.BackColor = Color.Black;
-            textBox8.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox8.ForeColor = Color.White;
-            textBox8.Location = new Point(194, 166);
-            textBox8.Name = "textBox8";
-            textBox8.ReadOnly = true;
-            textBox8.Size = new Size(67, 26);
-            textBox8.TabIndex = 16;
-            textBox8.TextAlign = HorizontalAlignment.Center;
+            ViewCocaColaPrice.BackColor = Color.Black;
+            ViewCocaColaPrice.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ViewCocaColaPrice.ForeColor = Color.White;
+            ViewCocaColaPrice.Location = new Point(194, 166);
+            ViewCocaColaPrice.Name = "ViewCocaColaPrice";
+            ViewCocaColaPrice.ReadOnly = true;
+            ViewCocaColaPrice.Size = new Size(67, 26);
+            ViewCocaColaPrice.TabIndex = 16;
+            ViewCocaColaPrice.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox7
+            // ViewFrenchFryPrice
             // 
-            textBox7.BackColor = Color.Black;
-            textBox7.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox7.ForeColor = Color.White;
-            textBox7.Location = new Point(194, 134);
-            textBox7.Name = "textBox7";
-            textBox7.ReadOnly = true;
-            textBox7.Size = new Size(67, 26);
-            textBox7.TabIndex = 15;
-            textBox7.TextAlign = HorizontalAlignment.Center;
+            ViewFrenchFryPrice.BackColor = Color.Black;
+            ViewFrenchFryPrice.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ViewFrenchFryPrice.ForeColor = Color.White;
+            ViewFrenchFryPrice.Location = new Point(194, 134);
+            ViewFrenchFryPrice.Name = "ViewFrenchFryPrice";
+            ViewFrenchFryPrice.ReadOnly = true;
+            ViewFrenchFryPrice.Size = new Size(67, 26);
+            ViewFrenchFryPrice.TabIndex = 15;
+            ViewFrenchFryPrice.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox6
+            // ViewBurgerPrice
             // 
-            textBox6.BackColor = Color.Black;
-            textBox6.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox6.ForeColor = Color.White;
-            textBox6.Location = new Point(194, 100);
-            textBox6.Name = "textBox6";
-            textBox6.ReadOnly = true;
-            textBox6.Size = new Size(67, 26);
-            textBox6.TabIndex = 14;
-            textBox6.TextAlign = HorizontalAlignment.Center;
+            ViewBurgerPrice.BackColor = Color.Black;
+            ViewBurgerPrice.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ViewBurgerPrice.ForeColor = Color.White;
+            ViewBurgerPrice.Location = new Point(194, 100);
+            ViewBurgerPrice.Name = "ViewBurgerPrice";
+            ViewBurgerPrice.ReadOnly = true;
+            ViewBurgerPrice.Size = new Size(67, 26);
+            ViewBurgerPrice.TabIndex = 14;
+            ViewBurgerPrice.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox5
+            // ViewHotDogPrice
             // 
-            textBox5.BackColor = Color.Black;
-            textBox5.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox5.ForeColor = Color.White;
-            textBox5.Location = new Point(194, 64);
-            textBox5.Name = "textBox5";
-            textBox5.ReadOnly = true;
-            textBox5.Size = new Size(67, 26);
-            textBox5.TabIndex = 13;
-            textBox5.TextAlign = HorizontalAlignment.Center;
+            ViewHotDogPrice.BackColor = Color.Black;
+            ViewHotDogPrice.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ViewHotDogPrice.ForeColor = Color.White;
+            ViewHotDogPrice.Location = new Point(194, 64);
+            ViewHotDogPrice.Name = "ViewHotDogPrice";
+            ViewHotDogPrice.ReadOnly = true;
+            ViewHotDogPrice.Size = new Size(67, 26);
+            ViewHotDogPrice.TabIndex = 13;
+            ViewHotDogPrice.TextAlign = HorizontalAlignment.Center;
             // 
-            // numericUpDown4
+            // InputCocaColaCount
             // 
-            numericUpDown4.BackColor = Color.Black;
-            numericUpDown4.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            numericUpDown4.ForeColor = Color.White;
-            numericUpDown4.Location = new Point(267, 166);
-            numericUpDown4.Name = "numericUpDown4";
-            numericUpDown4.Size = new Size(67, 26);
-            numericUpDown4.TabIndex = 9;
-            numericUpDown4.TextAlign = HorizontalAlignment.Center;
+            InputCocaColaCount.BackColor = Color.Black;
+            InputCocaColaCount.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            InputCocaColaCount.ForeColor = Color.White;
+            InputCocaColaCount.Location = new Point(267, 166);
+            InputCocaColaCount.Name = "InputCocaColaCount";
+            InputCocaColaCount.Size = new Size(67, 26);
+            InputCocaColaCount.TabIndex = 9;
+            InputCocaColaCount.TextAlign = HorizontalAlignment.Center;
+            InputCocaColaCount.ValueChanged += InputCocaColaCount_ValueChanged;
             // 
-            // numericUpDown3
+            // InputFrenchFryCount
             // 
-            numericUpDown3.BackColor = Color.Black;
-            numericUpDown3.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            numericUpDown3.ForeColor = Color.White;
-            numericUpDown3.Location = new Point(267, 133);
-            numericUpDown3.Name = "numericUpDown3";
-            numericUpDown3.Size = new Size(67, 26);
-            numericUpDown3.TabIndex = 8;
-            numericUpDown3.TextAlign = HorizontalAlignment.Center;
+            InputFrenchFryCount.BackColor = Color.Black;
+            InputFrenchFryCount.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            InputFrenchFryCount.ForeColor = Color.White;
+            InputFrenchFryCount.Location = new Point(267, 133);
+            InputFrenchFryCount.Name = "InputFrenchFryCount";
+            InputFrenchFryCount.Size = new Size(67, 26);
+            InputFrenchFryCount.TabIndex = 8;
+            InputFrenchFryCount.TextAlign = HorizontalAlignment.Center;
+            InputFrenchFryCount.ValueChanged += InputFrenchFryCount_ValueChanged;
             // 
-            // numericUpDown2
+            // InputBurgerCount
             // 
-            numericUpDown2.BackColor = Color.Black;
-            numericUpDown2.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            numericUpDown2.ForeColor = Color.White;
-            numericUpDown2.Location = new Point(267, 100);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(67, 26);
-            numericUpDown2.TabIndex = 7;
-            numericUpDown2.TextAlign = HorizontalAlignment.Center;
+            InputBurgerCount.BackColor = Color.Black;
+            InputBurgerCount.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            InputBurgerCount.ForeColor = Color.White;
+            InputBurgerCount.Location = new Point(267, 100);
+            InputBurgerCount.Name = "InputBurgerCount";
+            InputBurgerCount.Size = new Size(67, 26);
+            InputBurgerCount.TabIndex = 7;
+            InputBurgerCount.TextAlign = HorizontalAlignment.Center;
+            InputBurgerCount.ValueChanged += InputBurgerCount_ValueChanged;
             // 
-            // numericUpDown1
+            // InputHotDogCount
             // 
-            numericUpDown1.BackColor = Color.Black;
-            numericUpDown1.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            numericUpDown1.ForeColor = Color.White;
-            numericUpDown1.Location = new Point(267, 65);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(67, 26);
-            numericUpDown1.TabIndex = 6;
-            numericUpDown1.TextAlign = HorizontalAlignment.Center;
+            InputHotDogCount.BackColor = Color.Black;
+            InputHotDogCount.Font = new Font("Impact", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            InputHotDogCount.ForeColor = Color.White;
+            InputHotDogCount.Location = new Point(267, 65);
+            InputHotDogCount.Name = "InputHotDogCount";
+            InputHotDogCount.Size = new Size(67, 26);
+            InputHotDogCount.TabIndex = 6;
+            InputHotDogCount.TextAlign = HorizontalAlignment.Center;
+            InputHotDogCount.ValueChanged += InputHotDogCount_ValueChanged;
             // 
             // label8
             // 
@@ -419,68 +431,73 @@
             label7.TabIndex = 4;
             label7.Text = "Цена";
             // 
-            // checkBox4
+            // checkBoxCocaCola
             // 
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(17, 164);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(116, 27);
-            checkBox4.TabIndex = 3;
-            checkBox4.Text = "Кока-Кола";
-            checkBox4.UseVisualStyleBackColor = true;
+            checkBoxCocaCola.AutoSize = true;
+            checkBoxCocaCola.Location = new Point(17, 164);
+            checkBoxCocaCola.Name = "checkBoxCocaCola";
+            checkBoxCocaCola.Size = new Size(116, 27);
+            checkBoxCocaCola.TabIndex = 3;
+            checkBoxCocaCola.Text = "Кока-Кола";
+            checkBoxCocaCola.UseVisualStyleBackColor = true;
+            checkBoxCocaCola.CheckedChanged += checkBoxCocaCola_CheckedChanged;
             // 
-            // checkBox3
+            // checkBoxFrenchFry
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(17, 131);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(165, 27);
-            checkBox3.TabIndex = 2;
-            checkBox3.Text = "Картофель-Фри";
-            checkBox3.UseVisualStyleBackColor = true;
+            checkBoxFrenchFry.AutoSize = true;
+            checkBoxFrenchFry.Location = new Point(17, 131);
+            checkBoxFrenchFry.Name = "checkBoxFrenchFry";
+            checkBoxFrenchFry.Size = new Size(165, 27);
+            checkBoxFrenchFry.TabIndex = 2;
+            checkBoxFrenchFry.Text = "Картофель-Фри";
+            checkBoxFrenchFry.UseVisualStyleBackColor = true;
+            checkBoxFrenchFry.CheckedChanged += checkBoxFrenchFry_CheckedChanged;
             // 
-            // checkBox2
+            // checkBoxBurger
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(17, 98);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(116, 27);
-            checkBox2.TabIndex = 1;
-            checkBox2.Text = "Гамбургер";
-            checkBox2.UseVisualStyleBackColor = true;
+            checkBoxBurger.AutoSize = true;
+            checkBoxBurger.Location = new Point(17, 98);
+            checkBoxBurger.Name = "checkBoxBurger";
+            checkBoxBurger.Size = new Size(116, 27);
+            checkBoxBurger.TabIndex = 1;
+            checkBoxBurger.Text = "Гамбургер";
+            checkBoxBurger.UseVisualStyleBackColor = true;
+            checkBoxBurger.CheckedChanged += checkBoxBurger_CheckedChanged;
             // 
-            // checkBox1
+            // checkBoxHotDog
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(17, 65);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(91, 27);
-            checkBox1.TabIndex = 0;
-            checkBox1.Text = "Хот-Дог";
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBoxHotDog.AutoSize = true;
+            checkBoxHotDog.Location = new Point(17, 65);
+            checkBoxHotDog.Name = "checkBoxHotDog";
+            checkBoxHotDog.Size = new Size(91, 27);
+            checkBoxHotDog.TabIndex = 0;
+            checkBoxHotDog.Text = "Хот-Дог";
+            checkBoxHotDog.UseVisualStyleBackColor = true;
+            checkBoxHotDog.CheckedChanged += checkBoxHotDog_CheckedChanged;
             // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(button1);
+            groupBox6.Controls.Add(CheckButton);
             groupBox6.Controls.Add(label10);
-            groupBox6.Controls.Add(textBox10);
+            groupBox6.Controls.Add(ViewTotalPrice);
             groupBox6.ForeColor = Color.White;
             groupBox6.Location = new Point(21, 374);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(691, 154);
             groupBox6.TabIndex = 13;
             groupBox6.TabStop = false;
-            groupBox6.Text = "Всего До Оплаты";
+            groupBox6.Text = "Всего-До-Оплаты";
             // 
-            // button1
+            // CheckButton
             // 
-            button1.BackColor = Color.Black;
-            button1.Location = new Point(24, 47);
-            button1.Name = "button1";
-            button1.Size = new Size(102, 72);
-            button1.TabIndex = 14;
-            button1.Text = "Чек";
-            button1.UseVisualStyleBackColor = false;
+            CheckButton.BackColor = Color.Black;
+            CheckButton.Location = new Point(24, 47);
+            CheckButton.Name = "CheckButton";
+            CheckButton.Size = new Size(102, 72);
+            CheckButton.TabIndex = 14;
+            CheckButton.Text = "Чек";
+            CheckButton.UseVisualStyleBackColor = false;
+            CheckButton.Click += CheckButton_Click;
             // 
             // label10
             // 
@@ -491,17 +508,17 @@
             label10.TabIndex = 13;
             label10.Text = "RUB";
             // 
-            // textBox10
+            // ViewTotalPrice
             // 
-            textBox10.BackColor = Color.Black;
-            textBox10.Font = new Font("Impact", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox10.ForeColor = Color.White;
-            textBox10.Location = new Point(150, 60);
-            textBox10.Name = "textBox10";
-            textBox10.ReadOnly = true;
-            textBox10.Size = new Size(476, 50);
-            textBox10.TabIndex = 0;
-            textBox10.TextAlign = HorizontalAlignment.Right;
+            ViewTotalPrice.BackColor = Color.Black;
+            ViewTotalPrice.Font = new Font("Impact", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ViewTotalPrice.ForeColor = Color.White;
+            ViewTotalPrice.Location = new Point(150, 60);
+            ViewTotalPrice.Name = "ViewTotalPrice";
+            ViewTotalPrice.ReadOnly = true;
+            ViewTotalPrice.Size = new Size(476, 50);
+            ViewTotalPrice.TabIndex = 0;
+            ViewTotalPrice.TextAlign = HorizontalAlignment.Right;
             // 
             // Form1
             // 
@@ -517,6 +534,7 @@
             Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             Text = "BestOil";
+            Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox4.ResumeLayout(false);
@@ -527,10 +545,10 @@
             groupBox2.PerformLayout();
             groupBox5.ResumeLayout(false);
             groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)InputCocaColaCount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)InputFrenchFryCount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)InputBurgerCount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)InputHotDogCount).EndInit();
             groupBox6.ResumeLayout(false);
             groupBox6.PerformLayout();
             ResumeLayout(false);
@@ -542,39 +560,39 @@
         private GroupBox groupBox2;
         private Label label2;
         private Label label1;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
+        private TextBox ViewPriceOil;
+        private ComboBox InputTypeOil;
         private GroupBox groupBox3;
-        private RadioButton radioButton1;
+        private RadioButton VolumeType;
         private Label label4;
         private Label label3;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private RadioButton radioButton2;
+        private TextBox InputSum;
+        private TextBox InputVolume;
+        private RadioButton SumType;
         private GroupBox groupBox4;
         private Label label6;
-        private TextBox textBox4;
+        private TextBox ViewTotalOilPrice;
         private Label label5;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
+        private CheckBox checkBoxBurger;
+        private CheckBox checkBoxHotDog;
         private Label label8;
         private Label label7;
-        private CheckBox checkBox4;
-        private CheckBox checkBox3;
-        private NumericUpDown numericUpDown1;
-        private TextBox textBox8;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private NumericUpDown numericUpDown4;
-        private NumericUpDown numericUpDown3;
-        private NumericUpDown numericUpDown2;
+        private CheckBox checkBoxCocaCola;
+        private CheckBox checkBoxFrenchFry;
+        private NumericUpDown InputHotDogCount;
+        private TextBox ViewCocaColaPrice;
+        private TextBox ViewFrenchFryPrice;
+        private TextBox ViewBurgerPrice;
+        private TextBox ViewHotDogPrice;
+        private NumericUpDown InputCocaColaCount;
+        private NumericUpDown InputFrenchFryCount;
+        private NumericUpDown InputBurgerCount;
         private GroupBox groupBox5;
         private Label label9;
-        private TextBox textBox9;
+        private TextBox ViewTotalCofePrice;
         private GroupBox groupBox6;
-        private Button button1;
+        private Button CheckButton;
         private Label label10;
-        private TextBox textBox10;
+        private TextBox ViewTotalPrice;
     }
 }
